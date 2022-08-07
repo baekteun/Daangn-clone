@@ -1,3 +1,3 @@
-# 프로젝트 이름 세팅
+Daangn clone
 
-Tuist/ProjectDescriptionHelpers/Environment.swift 의 appName, targetName을 프로젝트 이름으로 변경.
+with [Louis](https://github.com/louis7308/Daangn)
