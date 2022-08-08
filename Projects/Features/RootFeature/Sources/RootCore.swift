@@ -1,12 +1,17 @@
 import ComposableArchitecture
 import Foundation
+import OnboardingFeature
 
-public struct RootState: Equatable {
-
+public enum RootState: Equatable {
+    case onboarding(OnboardingState)
+    
+    public init() {
+        self = .onboarding(.init())
+    }
 }
 
 public enum RootAction: Equatable {
-
+    case onboardingAction(OnboardingAction)
 }
 
 public struct RootEnvironment {
@@ -21,6 +26,14 @@ let rootReducer = Reducer<
     RootState,
     RootAction,
     RootEnvironment
-> { state, action, env in
-    return .none
-}
+>.combine(
+    onboardingReducer.pullback(
+        state: /RootState.onboarding,
+        action: /RootAction.onboardingAction,
+        environment: { _ in OnboardingEnvironment.live }
+    ),
+    Reducer { state, action, _ in
+        
+        return .none
+    }
+)
