@@ -22,7 +22,7 @@ public extension RootEnvironment {
     static let live = RootEnvironment()
 }
 
-let rootReducer = Reducer<
+public let rootReducer = Reducer<
     RootState,
     RootAction,
     RootEnvironment

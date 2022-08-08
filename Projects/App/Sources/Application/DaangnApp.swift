@@ -1,10 +1,18 @@
 import SwiftUI
+import RootFeature
+import ComposableArchitecture
 
 @main
 struct DaangnApp: App {
     var body: some Scene {
         WindowGroup {
-            Text("asdf")
+            RootView(
+                store: Store(
+                    initialState: RootState(),
+                    reducer: rootReducer,
+                    environment: .live
+                )
+            )
         }
     }
 }

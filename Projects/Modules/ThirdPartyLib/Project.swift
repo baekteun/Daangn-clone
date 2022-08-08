@@ -6,9 +6,11 @@ let project = Project.makeModule(
     name: "ThirdPartyLib",
     product: .framework,
     packages: [
-        .ComposableArchitecture
+        .ComposableArchitecture,
+        .Inject
     ],
     dependencies: [
-        .SPM.ComposableArchitecture
+        .SPM.ComposableArchitecture,
+        .SPM.Inject
     ]
 )

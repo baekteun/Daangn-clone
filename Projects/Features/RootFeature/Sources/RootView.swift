@@ -4,6 +4,10 @@ import OnboardingFeature
 
 public struct RootView: View {
     let store: Store<RootState, RootAction>
+    
+    public init(store: Store<RootState, RootAction>) {
+        self.store = store
+    }
 
     public var body: some View {
         SwitchStore(store) {
