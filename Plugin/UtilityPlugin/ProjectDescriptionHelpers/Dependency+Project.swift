@@ -10,6 +10,7 @@ public extension TargetDependency {
 }
 
 public extension TargetDependency.Project.Features {
+    static let OnboardingFeature = TargetDependency.feature(name: "OnboardingFeature")
     static let CommonFeature = TargetDependency.feature(name: "CommonFeature")
     static let RootFeature = TargetDependency.feature(name: "RootFeature")
 }

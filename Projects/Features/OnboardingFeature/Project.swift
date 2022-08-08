@@ -4,7 +4,7 @@ import ProjectDescriptionHelpers
 
 let project = Project.makeModule(
     name: "OnboardingFeature",
-    productt: .staticFramework,
+    product: .staticFramework,
     dependencies: [
         .Project.Features.CommonFeature
     ]
