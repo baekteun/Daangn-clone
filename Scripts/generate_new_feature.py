@@ -86,6 +86,7 @@ current_file_path = os.path.dirname(os.path.abspath(__file__))
 os.chdir(current_file_path)
 os.chdir(os.pardir)
 root_path = os.getcwd()
+print(root_path)
 os.chdir(root_path + '/Projects/Features')
 
 make_new_feature(feature_name, has_demo)
