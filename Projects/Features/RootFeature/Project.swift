@@ -7,5 +7,6 @@ let project = Project.makeModule(
     dependencies: [
         .Project.Features.CommonFeature,
         .Project.Features.OnboardingFeature
-    ]
+    ],
+    hasDemoApp: true
 )
